@@ -1,12 +1,12 @@
 import playGame from '../index.js';
 
-export default () => {
+const generateQuestionAndAnswer = () => {
     const randomNumber = Math.floor(Math.random() * 10);
-    const extectedAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
-
-    playGame(
-        'Answer "yes" if the number is even, otherwise answer "no".',
-        randomNumber,
-        extectedAnswer
-    );
+    const expectedAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
+    return [randomNumber, expectedAnswer];
 }
+
+export default () => playGame(
+    'Answer "yes" if the number is even, otherwise answer "no".',
+    generateQuestionAndAnswer
+);
