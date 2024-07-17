@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import parityGame from '../src/games/parity-сheck.js';
+import parityGame from '../src/games/even.js';
 
 parityGame();
